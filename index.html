@@ -5,8 +5,12 @@
     <title>HPLT</title>
     <!-- Latest compiled JavaScript -->
     <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="script.js"></script>
+    
   </head>
   <body>
+
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -14,32 +18,109 @@
         </div>
         <div class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav">
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Results</a></li>
+            <li><a href="#" class="settingsBut">Settings</a></li>
+            <li><a href="#" class="resultsBut">Results</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="container-fluid">
+
+    <div class="container-fluid settings">
       <div class="row">
-        <div class="col-sm-1">
+        <div class="col-xs-1">
           <label>Time:</label>
         </div>
-        <div class="col-sm-1">
+        <div class="col-xs-1">
           <input type="number" min="0" max="60" value="0"/>
         </div>
-        <div class="col-sm-1">
+        <div class="col-xs-1">
           <span>Minutes</span>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-2">
+        <div class="col-xs-2">
           <label>Number of players:</label>
         </div>
-        <div class="col-sm-1">
+        <div class="col-xs-1">
           <input type="number" min="2" value="2"/>
         </div>
       </div>
+      <div class="row">
+        <button>Start</button>
+      </div>
     </div>
+    
+    <div class="container-fluid">
+      <div class="row">
+    <div class="results col-xs-10 col-xs-offset-1" hidden>
+      <table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Hits</th>
+      <th>Shots</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Player 1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr class="info">
+      <td>Player 2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr class="success">
+      <td>Player 3</td>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr class="success">
+      <td>Player 4</td>
+      <td>4</td>
+      <td>4</td>
+      <td>4</td>
+    </tr>
+    <tr class="danger">
+      <td>Player 5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+    <tr class="danger">
+      <td>Player 6</td>
+      <td>6</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr class="warning">
+      <td>Player 7</td>
+      <td>7</td>
+      <td>7</td>
+      <td>7</td>
+    </tr>
+    <tr class="warning">
+      <td>Player 8</td>
+      <td>8</td>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table> 
+
+    </div>
+    </div>
+    </div>
+
+
+<script type="text/javascript">
+
+</script>
   </body>
 </html>
