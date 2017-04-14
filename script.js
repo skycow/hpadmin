@@ -13,9 +13,11 @@ $(function(){
 		if($("button").html() == "Start"){
 			$("button").addClass("btn-danger").removeClass("btn-success")
 			$("button").html("Stop")
+			$("#timeStatus").html($("#timeInput").val()+" minutes remaining");
 		}else if($("button").html() == "Stop") {
 			$("button").addClass("btn-success").removeClass("btn-danger")
-			$("button").html("Start")			
+			$("button").html("Start")
+			$("#timeStatus").html("No game running.");
 		}
 	});
 }

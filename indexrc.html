@@ -25,59 +25,28 @@
       </div>
     </nav>
 
-    <div class="container-fluid col-xs-8 col-xs-offset-2 well settings">
+    <div class="container-fluid settings">
       <div class="row">
-        <div class="col-xs-6">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              Time
-            </div>
-            <div class="panel-body">
-              <input id="timeInput" type="number" min="1" max="60" step="1" value="1"/>
-              <span>Minutes</span>
-              <!--<input type="range" name="points" min="0" max="10">-->
-            </div>
-          </div>
+        <div class="col-xs-1">
+          <label for="timeInput" class="control-label">Time</label>
         </div>
-        <div class="col-xs-6">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              Number of Players
-            </div>
-            <div class="panel-body">
-              <select id="playerInput" style="width:150px">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-              </select>
-            </div>
-          </div>
+        <div class="col-xs-1">
+          <input id="timeInput" type="number" min="0" max="60" value="0"/>
+        </div>
+        <div class="col-xs-1">
+          <span>Minutes</span>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12">
-          <button class="btn btn-success">Start</button>
+        <div class="col-xs-2">
+          <label for="playerInput"># of players</label>
+        </div>
+        <div class="col-xs-1">
+          <input id="playerInput" type="number" min="2" value="2"/>
         </div>
       </div>
-    </div>
-
-    <div class="container-fluid col-xs-8 col-xs-offset-2 well settings">
       <div class="row">
-        <div class="col-xs-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              Status
-            </div>
-            <div id="timeStatus" class="panel-body">
-              No game running.
-            </div>
-          </div>
-        </div>
+        <button class="btn btn-success">Start</button>
       </div>
     </div>
 
