@@ -2,6 +2,16 @@ $(function(){
 	const MAX_PLAYERS=12;
 	var curTime=1;
 	var myTimer;
+	var dTime=60000
+	$(".navbar-brand").click(function(event){
+	  event.preventDefault()
+		/*for testing only*/
+		if(dTime == 1000){
+			dTime = 60000
+		}else {
+			dTime = 1000
+		}
+	});
 	$(".settingsBut").click(function(event){
 	  event.preventDefault()
 	  $(".results").hide();
@@ -32,7 +42,7 @@ $(function(){
 				}
 
 
-		 }, 1000);
+		 }, dTime);
 		}else if($("button").html() == "Stop") {
 			if(myTimer){
 				clearInterval(myTimer);
