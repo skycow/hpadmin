@@ -25,6 +25,8 @@ $(function(){
 					$("#timeStatus").html("No game running.");
 					$("button").addClass("btn-success").removeClass("btn-danger")
 					$("button").html("Start")
+					$("#playerInput").removeAttr('disabled');
+					$("#timeInput").removeAttr('disabled');
 				}
 
 
@@ -41,11 +43,15 @@ $(function(){
 		if($("button").html() == "Start"){
 			$("button").addClass("btn-danger").removeClass("btn-success")
 			$("button").html("Stop")
+			$("#playerInput").attr('disabled', 'disabled');
+			$("#timeInput").attr('disabled', 'disabled');
 			//$("#timeStatus").html($("#timeInput").val()+" minutes remaining");
 		}else if($("button").html() == "Stop") {
 			$("button").addClass("btn-success").removeClass("btn-danger")
 			$("button").html("Start")
 			$("#timeStatus").html("No game running.");
+			$("#playerInput").removeAttr('disabled');
+			$("#timeInput").removeAttr('disabled');
 		}
 	});
 	for(i=2; i<=MAX_PLAYERS;i++){
