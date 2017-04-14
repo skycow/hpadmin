@@ -33,13 +33,13 @@ $(function(){
 				}
 
 
-		 }, 60000);
+		 }, 1000);
 		}else if($("button").html() == "Stop") {
 			if(myTimer){
 				clearInterval(myTimer);
 				curTime=1
 			}
-
+			$('.progress-bar').css('width', 100+'%')
 		}
 	});
 	$("button").click(function(event){
