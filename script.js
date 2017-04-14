@@ -17,7 +17,6 @@ $(function(){
 			$("#timeStatus").html($("#timeInput").val()+" minutes remaining");
 			$('.progress-bar').css('width', 0+'%')
 			myTimer = setInterval(function(){
-				console.log("tick")
 				$("#timeStatus").html($("#timeInput").val()-curTime+" minutes remaining");
 				valeur = (curTime)/$("#timeInput").val()*100
 				$('.progress-bar').css('width', valeur+'%')
