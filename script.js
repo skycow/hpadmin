@@ -15,9 +15,12 @@ $(function(){
 	$("button").click(function(event){
 		if($("button").html() == "Start"){
 			$("#timeStatus").html($("#timeInput").val()+" minutes remaining");
+			$('.progress-bar').css('width', 0+'%')
 			myTimer = setInterval(function(){
 				console.log("tick")
 				$("#timeStatus").html($("#timeInput").val()-curTime+" minutes remaining");
+				valeur = (curTime)/$("#timeInput").val()*100
+				$('.progress-bar').css('width', valeur+'%')
 			  curTime+=1;
 				if(parseInt($("#timeInput").val())+1 == curTime){
 					curTime = 1;
